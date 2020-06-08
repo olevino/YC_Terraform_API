@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Список шаблонов Terraform</title>
+  </head>
+  <body>
+    {% for template in templates %}
+    <p><b>{{template.full_name}}</b> ({{template.description}})</p>
+    <input type="submit" value="Run!"
+    onclick="window.location='/template/{{template.short_name}}';" />
+    {% endfor %}
+  </body>
+</html>

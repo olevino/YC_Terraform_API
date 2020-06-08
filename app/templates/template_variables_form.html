@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Форма запуска {{template_name}}</title>
+  </head>
+  <body>
+    <h1>Заполните параметры</h1>
+    <form action="" method="post" name="run_template">
+
+        {% for field in form.fields %}
+
+
+
+        {{form.render_field(field)}} - <b>{{field}}.</b> {{form.render_description(field)}} <br>
+
+            {% for error in form.render_errors(field) %}
+                <span style="color: red;">[{{error}}]</span>
+            {% endfor %}<br>
+            <br>
+
+        {% endfor %}
+        <p><input type="submit" value="Run template!"></p>
+    </form>
+  </body>
+</html>
+
+
