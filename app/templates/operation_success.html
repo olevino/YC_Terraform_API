@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Terraform in Yandex.Cloud</title>
+  </head>
+  <body>
+    <h1>Cтатус операции {{operation_id}} в разделе {{folder_id}}</h1>
+    <h2>Успех! Операция завершилась</h2>
+
+    Данные для доступа к архитектуре:
+
+    {% for output in outputs %}
+    <p><b>{{output.name}}</b>: {{output.value}}</p>
+    {% endfor %}
+
+    <input type="submit" value="Refresh"
+    onclick="window.location='/check_state/{{folder_id}}/{{operation_id}}';" />
+    <input type="submit" value="Back"
+    onclick="window.location='/check_state/{{folder_id}}';" />
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Terraform in Yandex.Cloud</title>
+  </head>
+  <body>
+    <h2>Список операций в разделе {{folder_id}}</h2>
+    {% for operation in operations %}
+    <p>Operation_id: <b>{{operation}}</b> </p>
+    <input type="submit" value="Check state!"
+    onclick="window.location='/check_state/{{folder_id}}/{{operation}}';" />
+    {% endfor %}
+    <br>
+    <br>
+    <input type="submit" value="Back"
+    onclick="window.location='/check_state';" />
+  </body>
+</html>

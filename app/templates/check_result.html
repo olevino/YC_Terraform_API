@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Terraform in Yandex.Cloud</title>
+  </head>
+  <body>
+    <h2>Чтобы увидеть список своих операций - укажите раздел</h2>
+    <form action="" method="post" name="run_template">
+        {{form.hidden_tag()}}
+        {{form.folder_id}} - <b>folder_id</b>. Идентификатор раздела, указанный при создании операции.
+        <br>
+        <br>
+        {{form.submit}}
+    </form>
+    <input type="submit" value="Back"
+    onclick="window.location='/';" />
+  </body>
+</html>
+
+

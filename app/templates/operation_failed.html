@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Terraform in Yandex.Cloud</title>
+  </head>
+  <body>
+    <h1>Cтатус операции {{operation_id}} в разделе {{folder_id}}</h1>
+    <h2>Неудача! Операция завершилась с ошибкой</h2>
+
+    {% for error in errors %}
+      {{error}}
+      <br>
+        <br>
+    {% endfor %}
+
+    <input type="submit" value="Refresh"
+    onclick="window.location='/check_state/{{folder_id}}/{{operation_id}}';" />
+    <input type="submit" value="Back"
+    onclick="window.location='/check_state/{{folder_id}}';" />
+  </body>
+</html>

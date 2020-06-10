@@ -1,12 +1,15 @@
 <html>
   <head>
-    <title>Список шаблонов Terraform</title>
+    <title>Terraform in Yandex.Cloud</title>
   </head>
   <body>
+    <h2>Список шаблонов Terraform</h2>
     {% for template in templates %}
-    <p><b>{{template.full_name}}</b> ({{template.description}})</p>
+    <p><b>{{template.name}}</b> ({{template.description}})</p>
     <input type="submit" value="Run!"
-    onclick="window.location='/template/{{template.short_name}}';" />
+    onclick="window.location='/template/{{template.id}}';" />
     {% endfor %}
+    <input type="submit" value="Back"
+    onclick="window.location='/';" />
   </body>
 </html>

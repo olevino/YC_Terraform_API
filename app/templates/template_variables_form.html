@@ -1,14 +1,13 @@
 <html>
   <head>
-    <title>Форма запуска {{template_name}}</title>
+    <title>Terraform in Yandex.Cloud</title>
   </head>
   <body>
-    <h1>Заполните параметры</h1>
+    <h1>Форма запуска {{template_name}}</h1>
+    <h2>Заполните параметры</h2>
     <form action="" method="post" name="run_template">
-
+        {{form.hidden_tag()}}
         {% for field in form.fields %}
-
-
 
         {{form.render_field(field)}} - <b>{{field}}.</b> {{form.render_description(field)}} <br>
 
@@ -18,8 +17,10 @@
             <br>
 
         {% endfor %}
-        <p><input type="submit" value="Run template!"></p>
+        {{form.submit}}
     </form>
+    <input type="submit" value="Back"
+    onclick="window.location='/templates';" />
   </body>
 </html>
 
