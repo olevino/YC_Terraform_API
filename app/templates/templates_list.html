@@ -8,7 +8,9 @@
     <p><b>{{template.name}}</b> ({{template.description}})</p>
     <input type="submit" value="Run!"
     onclick="window.location='/template/{{template.id}}';" />
+    <br>
     {% endfor %}
+    <br>
     <input type="submit" value="Back"
     onclick="window.location='/';" />
   </body>
