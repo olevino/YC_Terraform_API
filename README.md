@@ -9,14 +9,15 @@
 6) sudo apt-get install unzip
 7) git clone https://github.com/olevino/YC_Terraform_templates.git
 8) git clone https://github.com/olevino/YC_Terraform_API.git
-9) wget https://releases.hashicorp.com/terraform/0.12.18/terraform_0.12.18_linux_amd64.zip
-10) unzip terraform_0.12.18_linux_amd64.zip
+9) wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+10) unzip terraform_0.12.26_linux_amd64.zip
 11) sudo mv terraform /usr/local/bin/
-12) mkdir terraform_workdir; cd terraform_workdir
+12) mkdir terraform_workdir; mkdir terraform_workdir/terraform.tfstate.d; cd terraform_workdir
 13) cp ~/YC_Terraform_templates/\*/terraform/\*.tf ~/terraform_workdir
 14) terraform init
 
 15) vim ~/YC_Terraform_API/constants.py
+
 PATH_TO_TERRAFORM_DIRECTORY = "..." (п. 11)
 PATH_TO_TEMPLATES_REPOSITORY = "..." (п. 6)
 
