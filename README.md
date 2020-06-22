@@ -13,7 +13,7 @@
 10) unzip terraform_0.12.18_linux_amd64.zip
 11) sudo mv terraform /usr/local/bin/
 12) mkdir terraform_workdir; cd terraform_workdir
-13) cp ~/YC_Terraform_templates/*/terraform/*.tf ~/terraform_workdir
+13) cp ~/YC_Terraform_templates/\*/terraform/\*.tf ~/terraform_workdir
 14) terraform init
 
 15) vim ~/YC_Terraform_API/constants.py
